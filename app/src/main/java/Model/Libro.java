@@ -25,8 +25,6 @@ public class Libro {
   public Libro(){
 
   }
-
-
   public String getTitulo() {
     return titulo;
   }
