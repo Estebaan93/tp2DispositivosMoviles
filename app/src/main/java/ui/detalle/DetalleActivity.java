@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ui.View.databinding.ActivityDetalleBinding;
 
-import data.model.Libro;
+import data.Model.Libro;
 
 public class DetalleActivity extends AppCompatActivity {
   private ActivityDetalleBinding binding;
