@@ -6,9 +6,10 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.example.ui.View.R;
 import com.example.ui.View.databinding.ActivityDetalleBinding;
 
-import data.Model.Libro;
+import data.model.Libro;
 
 public class DetalleActivity extends AppCompatActivity {
   private ActivityDetalleBinding binding;
@@ -22,6 +23,8 @@ public class DetalleActivity extends AppCompatActivity {
 
     Libro libro= (Libro) getIntent().getSerializableExtra("libro");
     if(libro !=null){
+      int portada= libro.getPortada() !=0 ? libro.getPortada() : R.drawable.generico;
+      binding.ivPortada.setImageResource(portada);
       binding.tvTitulo.setText(libro.getTitulo());
       binding.tvAutor.setText((libro.getAutor()));
       binding.tvAnio.setText(libro.getAnio());

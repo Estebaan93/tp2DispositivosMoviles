@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     });
 
-    viewModel.getMutableMensaje().observe(this, mensaje -> Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show());
+    //Toast
+    viewModel.getMutableMensaje().observe(this, mensaje -> Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_LONG).show());
 
     binding.btnBuscarLibro.setOnClickListener(buscar->
             viewModel.buscar(binding.etBuscarLibro.getText().toString()));

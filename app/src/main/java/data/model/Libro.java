@@ -1,4 +1,4 @@
-package data.Model;
+package data.model;
 
 import java.io.Serializable;
 
@@ -10,10 +10,11 @@ public class Libro implements Serializable {
   private String genero;
   private String categoria;
   private String descripcion;
+  private int portada;
 
 
   //Constructor con parametros
-  public Libro (String titulo, String autor, String anio, int paginas, String genero, String categoria, String descripcion){
+  public Libro (String titulo, String autor, String anio, int paginas, String genero, String categoria, String descripcion, int portada){
     this.titulo= titulo;
     this.autor= autor;
     this.anio= anio;
@@ -21,6 +22,7 @@ public class Libro implements Serializable {
     this.genero= genero;
     this.categoria= categoria;
     this.descripcion= descripcion;
+    this.portada= portada;
   }
 
   //Constructor vacio
@@ -82,4 +84,9 @@ public class Libro implements Serializable {
   public void setDescripcion(String descripcion) {
     this.descripcion = descripcion;
   }
+
+  public int getPortada() {return portada;}
+
+  public void setPortada(int portada) {this.portada= portada;}
+
 }

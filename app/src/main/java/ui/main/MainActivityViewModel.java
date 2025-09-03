@@ -8,37 +8,42 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 
-
-import data.Model.Libro;
+import data.model.Libro;
 import data.repository.LibroRepository;
 
 public class MainActivityViewModel extends AndroidViewModel {
-  private MutableLiveData<String> mutableMensaje= new MutableLiveData<>();
-  private MutableLiveData<Libro> mutableLibro= new MutableLiveData<>();
-  private LibroRepository repo= new LibroRepository();
+  private MutableLiveData<String> mutableMensaje;//= new MutableLiveData<>();
+  private MutableLiveData<Libro> mutableLibro;//= new MutableLiveData<>();
+  private LibroRepository repo;//= new LibroRepository();
   public MainActivityViewModel(@NonNull Application application) {
     super(application);
     repo= new LibroRepository();
   }
 
   public LiveData<String> getMutableMensaje() {
+    if(mutableMensaje==null){
+      mutableMensaje= new MutableLiveData<>();
+    }
     return mutableMensaje;
   }
 
   public LiveData<Libro> getMutableLibro() {
+    if(mutableLibro==null){
+      mutableLibro= new MutableLiveData<>();
+    }
     return mutableLibro;
   }
 
   public void buscar(String titulo){
     if(titulo==null || titulo.trim().isEmpty()){
-      mutableMensaje.setValue("Ingresa el titulo para buscar");
+      ((MutableLiveData<String>) getMutableMensaje()).setValue("Ingresa el titulo para buscar");
       return;
     }
     Libro l= repo.buscarPorTitulo(titulo);
     if(l !=null){
-      mutableLibro.setValue(l);
+      ((MutableLiveData<Libro>) getMutableLibro()).setValue(l);
     }else {
-      mutableMensaje.setValue("No se encontro el libro");
+      ((MutableLiveData<String>) getMutableMensaje()).setValue("No se encontro el libro");
     }
   }
 

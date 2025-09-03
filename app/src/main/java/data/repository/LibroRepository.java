@@ -2,8 +2,9 @@ package data.repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.example.ui.View.R;
 
-import data.Model.Libro;
+import data.model.Libro;
 
 public class LibroRepository {
   private List<Libro> libros= new ArrayList<>();
@@ -17,7 +18,8 @@ public class LibroRepository {
             223,
             "Fantasia",
             "Juvenil",
-            "Harry descubre que es un mago y asiste al colegio Hogwarts, donde vivira increibles aventuras."
+            "Harry descubre que es un mago y asiste al colegio Hogwarts, donde vivira increibles aventuras.",
+            R.drawable.harry_potter
     ));
 
     libros.add(new Libro(
@@ -27,7 +29,8 @@ public class LibroRepository {
             423,
             "Fantasaa epica",
             "Aventura",
-            "Frodo Bolsón debe destruir el Anillo Unico y emprende un viaje lleno de peligros acompañado por la comunidad del anillo."
+            "Frodo Bolsón debe destruir el Anillo Unico y emprende un viaje lleno de peligros acompañado por la comunidad del anillo.",
+            R.drawable.ic_launcher_background
     ));
     libros.add(new Libro(
             "Percy Jackson y el ladron del rayo",
@@ -36,7 +39,8 @@ public class LibroRepository {
             377,
             "Fantasia",
             "Mitologia",
-            "Percy descubre que es hijo de un dios griego y debe emprender una mision para recuperar el rayo de Zeus."
+            "Percy descubre que es hijo de un dios griego y debe emprender una mision para recuperar el rayo de Zeus.",
+            R.drawable.percy_jackson
     ));
     libros.add(new Libro(
             "Cazadores de Sombras: Ciudad de Hueso",
@@ -45,7 +49,8 @@ public class LibroRepository {
             512,
             "Fantasia urbana",
             "Juvenil",
-            "Clary Fray se adentra en un mundo oculto de demonios y cazadores de sombras tras presenciar un asesinato sobrenatural."
+            "Clary Fray se adentra en un mundo oculto de demonios y cazadores de sombras tras presenciar un asesinato sobrenatural.",
+            R.drawable.cazadore_de_sombras
     ));
   }
 
