@@ -11,7 +11,7 @@ import com.example.ui.View.databinding.ActivityDetalleBinding;
 import data.model.Libro;
 
 public class DetalleActivity extends AppCompatActivity {
-  private com.example.ui.View.databinding.ActivityDetalleBinding binding;
+  private ActivityDetalleBinding binding;
 
   @Override
   protected void onCreate(Bundle savedInstanceState){
