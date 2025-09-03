@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-  namespace = "com.example.View"
+  namespace = "com.example.ui.View"
   compileSdk = 36
 
   defaultConfig {
@@ -26,6 +26,12 @@ android {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
   }
+/*Configuramos el viewBinding por cada elemento xml que haya dentro de la vista (botones, editext, viewtext etc)
+  Me va crear instancias en java que mas adelante poder referenciar en codigo */
+  buildFeatures {
+    viewBinding= true;
+  }
+
 }
 
 dependencies {

@@ -12,7 +12,10 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.Tp2DispositivosMoviles">
     <activity
-        android:name="View.MainActivity"
+        android:name="ui.detalle.DetalleActivity"
+        android:exported="false" />
+    <activity
+        android:name="ui.main.MainActivity"
         android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
