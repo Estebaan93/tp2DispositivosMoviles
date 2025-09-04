@@ -54,17 +54,18 @@ public class LibroRepository {
     ));
   }
 
-//Coicnidencia parcial con el titulo
+//Coicnidencia parcial con el titulo mayor a 3 letras
   public Libro buscarPorTitulo(String busq){
     if(busq==null) return null;
+
     String s= busq.trim().toLowerCase();
-    if(s.isEmpty()) return null;
+    if(s.length()<3) return null;
     for(Libro l : libros){
       if (l.getTitulo() !=null && l.getTitulo().toLowerCase().contains(s)){
         return l;
       }
     }
-    return  null;
+    return null;
   }
 
 }
